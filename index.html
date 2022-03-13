@@ -28,7 +28,7 @@
     <title>Pomodoro Timer Technique</title>
 </head>
 
-<body>
+<body onload="template()">
     <div class="container">
         <!-- Heading -->
         <h1 class="text-center my-5 heading">Pomodoro App</h1>
@@ -48,12 +48,13 @@
         </div>
         <!-- start and reset buttons -->
         <div class="container d-flex justify-content-center align-items-center my-5">
-            <button class="btn">
+            <button class="btn" onclick="start()">
                 <i class="fas fa-play fa-2x"></i>
             </button>
             <a href="/index.html"><i class="fas fa-redo-alt fa-2x"></i></a>
         </div>
     </div>
+    <script src="/script.js"></script>
 </body>
 
 </html>
