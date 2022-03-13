@@ -24,4 +24,23 @@ function start(){
         minutes = minutes - 1;
         document.getElementById('minutes').innerHTML = minutes;
     }
+
+    function secondsTimer(){
+        seconds = seconds - 1;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if(seconds <= 0){
+            if(minutes <= 0){
+                clearInterval(minutes_interval);
+                clearInterval(seconds_interval);
+
+                document.getElementById("done").innerHTML = "Session completed! Take a break";
+
+                document.getElementById("done").classList.add("show_message");
+
+                bell.play();
+            }
+            seconds = 60;
+        }
+    }
 }
