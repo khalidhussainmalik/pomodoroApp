@@ -9,11 +9,18 @@ body{
     width: 100%;
 }
 
+.todo{
+    color: #fff;
+    text-align: center;
+    margin: 2rem;
+    align-items: center;
+}
+
 .timer{
     color: #fff;
     text-align: center;
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 5rem;
     border: 5px solid #fff;
     border-radius: 10rem;
     display: flex;

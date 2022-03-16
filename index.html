@@ -32,6 +32,20 @@
     <div class="container">
         <!-- Heading -->
         <h1 class="text-center my-5 heading">Pomodoro App</h1>
+
+        <!-- todo input -->
+
+        <div class="container todo">
+            <form>
+                <label for="">Add Task</label>
+                <input type="text" class="todo-input" />
+                <button class="todo-button" type="submit">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <a href="/index.html"><i class="fa-solid fa-arrows-rotate"></i></a>
+            </form>
+        </div>
+
         <!-- Main Timer -->
         <div class="container timer">
             <div class="row">
@@ -49,12 +63,13 @@
         <div>
             <h3 id="done" class="text-center my-5"></h3>
         </div>
+
         <!-- start and reset buttons -->
         <div class="container d-flex justify-content-center align-items-center my-5">
-            <button class="btn" onclick="start()">
-                <i class="fas fa-play fa-2x"></i>
-            </button>
-            <a href="/index.html"><i class="fas fa-redo-alt fa-2x"></i></a>
+        </div>
+
+        <div class="addtodolist">
+            <h2 class="addlist" ></h2>
         </div>
     </div>
     <script src="/script.js"></script>

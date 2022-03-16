@@ -4,14 +4,31 @@ let seconds = 0;
 let click = new Audio('/sounds/click.wav')
 let bell = new Audio('/sounds/bell2.wav')
 
-function template(){
+function template() {
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
 }
 
-function start(){
-    click.play();
-    minutes = 24; 
+// Selectors
+const todoInput = document.querySelector('.todo-input');
+const todoButton = document.querySelector('.todo-button');
+
+// Event Listener
+todoButton.addEventListener('click', addTodo);
+
+function addTodo(event) {
+    event.preventDefault();
+
+    // Todo
+    function todolist() {
+        let addlist = document.querySelector('todolist');
+        addlist.innerHTML = todoInput;
+    }
+
+
+        console.log("inside if")
+        click.play();
+    minutes = 24;
     seconds = 59;
 
     document.getElementById("minutes").innerHTML = minutes;
@@ -20,17 +37,17 @@ function start(){
     let minutes_interval = setInterval(minutesTimer, 60000);
     let seconds_interval = setInterval(secondsTimer, 1000);
 
-    function minutesTimer(){
+    function minutesTimer() {
         minutes = minutes - 1;
         document.getElementById('minutes').innerHTML = minutes;
     }
 
-    function secondsTimer(){
+    function secondsTimer() {
         seconds = seconds - 1;
         document.getElementById("seconds").innerHTML = seconds;
 
-        if(seconds <= 0){
-            if(minutes <= 0){
+        if (seconds <= 0) {
+            if (minutes <= 0) {
                 clearInterval(minutes_interval);
                 clearInterval(seconds_interval);
 
